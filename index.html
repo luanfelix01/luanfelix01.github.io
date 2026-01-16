@@ -3,117 +3,156 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🍀 Rifa do Bololô 🍀</title>
+<title>Rifa do Bololô 🍀</title>
 
 <style>
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
 }
 
 body {
-  min-height: 100vh;
-  font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(135deg, #061c24, #0b3a3f, #042f2e);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   color: #fff;
+  min-height: 100vh;
+}
+
+.header {
+  background: linear-gradient(90deg, #0f0c29, #302b63, #24243e);
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0,0,0,.6);
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  color: #ffd700;
+  text-shadow: 0 0 15px rgba(255,215,0,.7);
 }
 
 .container {
-  width: 100%;
   max-width: 420px;
-  padding: 25px;
-  text-align: center;
+  margin: 25px auto;
+  padding: 20px;
   animation: fade 1.2s ease;
 }
 
-h1 {
-  font-size: 2.3rem;
-  color: #ffd700;
-  text-shadow: 0 0 20px rgba(255,215,0,.7);
-  margin-bottom: 12px;
+@keyframes fade {
+  from {opacity:0; transform: translateY(20px);}
+  to {opacity:1; transform: translateY(0);}
 }
 
-.sub {
-  opacity: .9;
+.banner img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.6);
   margin-bottom: 25px;
 }
 
 .card {
-  background: rgba(0,0,0,.55);
-  border-radius: 22px;
+  background: rgba(0,0,0,.45);
+  border-radius: 20px;
   padding: 25px;
-  box-shadow: 0 0 30px rgba(0,0,0,.6);
+  box-shadow: 0 10px 25px rgba(0,0,0,.5);
 }
 
-.item {
-  font-size: 1.2rem;
-  margin: 12px 0;
+.card h2 {
+  text-align: center;
+  margin-bottom: 15px;
 }
 
-.preco {
-  margin-top: 18px;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #00ffb3;
+.prize {
+  display: flex;
+  justify-content: space-between;
+  background: rgba(255,255,255,.08);
+  padding: 12px;
+  border-radius: 12px;
+  margin: 10px 0;
+  font-size: 1.1rem;
 }
 
-.botao {
-  display: block;
-  margin-top: 30px;
-  padding: 18px;
-  border-radius: 60px;
-  text-decoration: none;
+.price {
+  text-align: center;
+  margin: 20px 0;
   font-size: 1.4rem;
+  color: #00ffcc;
   font-weight: bold;
+}
+
+.whatsapp {
+  display: block;
+  background: linear-gradient(90deg, #25D366, #1ebe5d);
   color: #000;
-  background: linear-gradient(135deg, #2aff9f, #00ffb3);
-  box-shadow: 0 0 30px rgba(0,255,180,.9);
-  animation: pulse 1.8s infinite;
+  text-align: center;
+  padding: 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: 0 5px 20px rgba(37,211,102,.6);
+  transition: .3s;
+}
+
+.whatsapp:hover {
+  transform: scale(1.05);
 }
 
 .footer {
+  text-align: center;
   margin-top: 20px;
-  font-size: .9rem;
-  opacity: .7;
-}
-
-@keyframes fade {
-  from { opacity: 0; transform: translateY(15px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.08); }
-  100% { transform: scale(1); }
+  opacity: .8;
 }
 </style>
 </head>
 
 <body>
+
+<div class="header">
+  <h1>🍀 RIFA DO BOLOLÔ 🍀</h1>
+</div>
+
 <div class="container">
-  <h1>🍀 Rifa do Bololô 🍀</h1>
-  <p class="sub">Participe e concorra a prêmios em dinheiro 💰</p>
+
+  <!-- AQUI VOCÊ COLOCA A IMAGEM DO PERSONAGEM -->
+  <div class="banner">
+    <img src="banner.png" alt="Rifa do Bololô">
+  </div>
 
   <div class="card">
-    <div class="item">🥇 1º Lugar: <strong>R$ 600,00</strong></div>
-    <div class="item">🥈 2º Lugar: <strong>R$ 300,00</strong></div>
-    <div class="item">🥉 3º Lugar: <strong>R$ 100,00</strong></div>
+    <h2>🏆 Premiação Total: R$ 1.000,00</h2>
 
-    <div class="preco">💸 Dezena por apenas R$ 15,00</div>
+    <div class="prize">
+      <span>🥇 1º Lugar</span>
+      <strong>R$ 600,00</strong>
+    </div>
 
-    <a class="botao" href="https://wa.me/5581989539523" target="_blank">
+    <div class="prize">
+      <span>🥈 2º Lugar</span>
+      <strong>R$ 300,00</strong>
+    </div>
+
+    <div class="prize">
+      <span>🥉 3º Lugar</span>
+      <strong>R$ 100,00</strong>
+    </div>
+
+    <div class="price">
+      💰 Dezena por apenas R$ 15,00
+    </div>
+
+    <a class="whatsapp" href="https://wa.me/55SEUNUMERO" target="_blank">
       📲 Comprar pelo WhatsApp
     </a>
   </div>
 
   <div class="footer">
-    Sorteio pela Loteria Federal
+    🍀 Sorteio pela Loteria Federal<br>
+    Quanto mais dezenas, mais chances de ganhar!
   </div>
+
 </div>
+
 </body>
 </html>
